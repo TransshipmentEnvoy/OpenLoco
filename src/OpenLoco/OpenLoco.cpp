@@ -346,6 +346,9 @@ namespace OpenLoco
     // 0x004BE65E
     [[noreturn]] void exitCleanly()
     {
+        uint8_t* myptr = nullptr;
+        *myptr = 42;
+
         Audio::disposeDSound();
         Audio::close();
         Ui::disposeCursors();
